@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+<script>
+    console.log("Hello Wrorld");
+    let name = "Attawit";
+    let age = 30;
+    let isStudent = false;
+    const major = "Computer Science";
+    const start =0.00;
+    const end = 100.00;
+
+    //ข้อ1 การคำนวณอายุ
+    const birthYear = 1978;
+    const currentYear = 2025;
+    const ageInYears = currentYear - birthYear;
+    console.log(`คุณอายุ ${ageInYears} ปี`);
+
+    //ข้อ2 
+    const student = {
+        name: "Attawit",
+        score: 75,
+        isPass: false
+    };
+    
+    if (student.score >= 50) {
+        student.isPass = true;
+        console.log(`${student.name} สอบผ่าน คะแนน: ${student.score}`);
+    } else {
+        student.isPass = false;
+        console.log(`${student.name} สอบไม่ผ่าน คะแนน: ${student.score}`);
+    }
+
+    //ข้อ3 การแสดงผลตัวเลขคู่
+    console.log("ตัวเลขคู่ตั้งแต่ 0 ถึง 20:");
+    for (let i = 0; i <= 20; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+
+    //ข้อ4 การใช้ switch statement
+    const weather = "hot";
+    switch (weather) {
+        case "hot":
+            console.log("อากาศร้อน ควรดื่มน้ำเยอะๆ");
+            break;
+        case "cold":
+            console.log("อากาศหนาว ควรใส่เสื้อกันหนาว");
+            break;
+        case "rainy":
+            console.log("ฝนตก ควรพกร่ม");
+            break;
+        default:
+            console.log("สภาพอากาศปกติ");
+    }
+
+    //ข้อ5 การหาผลรวมใน Array
+    const numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+    let sum = 0;
+    
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    
+    console.log(`ผลรวมของตัวเลขทั้งหมด: ${sum}`);
+</script>
+</html>
