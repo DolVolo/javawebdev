@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .product {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .out-of-stock {
+            color: red;
+        }
+        
+        #gallery {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .thumbnail:hover {
+            border-color: #007bff;
+        }
+        
+        #main-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #user-profile, #guest-message {
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        #user-profile {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        
+        #guest-message {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+        
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript DOM Exercises</h1>
+    
+    <!-- ข้อ 1: การจัดการสินค้าคงคลัง -->
+    <div class="section">
+        <h2>ข้อ 1: การจัดการสินค้าคงคลัง</h2>
+        <div id="product-container">
+            <!-- สินค้าจะถูกเพิ่มด้วย JavaScript -->
+        </div>
+    </div>
+    
+    <!-- ข้อ 2: การสร้างแกลเลอรีภาพขนาดเล็ก -->
+    <div class="section">
+        <h2>ข้อ 2: การสร้างแกลเลอรีภาพขนาดเล็ก</h2>
+        <img id="main-image" src="https://picsum.photos/300/300?random=1" alt="Main Image">
+        <div id="gallery">
+            <!-- รูปภาพขนาดเล็กจะถูกเพิ่มด้วย JavaScript -->
+        </div>
+    </div>
+    
+    <!-- ข้อ 3: การแสดงผลหน้าเพจแบบมีเงื่อนไข -->
+    <div class="section">
+        <h2>ข้อ 3: การแสดงผลหน้าเพจแบบมีเงื่อนไข</h2>
+        <button id="toggle-login">สลับสถานะการล็อกอิน</button>
+        
+        <div id="user-profile" class="hidden">
+            <h3>โปรไฟล์ผู้ใช้</h3>
+            <p>ยินดีต้อนรับ! คุณได้เข้าสู่ระบบแล้ว</p>
+            <p>ชื่อผู้ใช้: นักพัฒนา</p>
+            <p>อีเมล: developer@example.com</p>
+        </div>
+        
+        <div id="guest-message">
+            <h3>ข้อความสำหรับผู้เยี่ยมชม</h3>
+            <p>กรุณาเข้าสู่ระบบเพื่อเข้าถึงฟีเจอร์ทั้งหมด</p>
+            <button id="login-button">เข้าสู่ระบบ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
