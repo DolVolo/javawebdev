@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+<script>
+    console.log("Hello Wrorld");
+    let name = "Attawit";
+    let age = 30;
+    let isStudent = false;
+    const major = "Computer Science";
+    const start =0.00;
+    const end = 100.00;
+
+    //ข้อ1 การคำนวณอายุ
+    const birthYear = 1978;
+    const currentYear = 2025;
+    const ageInYears = currentYear - birthYear;
+    console.log(`no 1`);
+    console.log(`คุณอายุ ${ageInYears} ปี`);
+
+    //ข้อ2 
+    console.log(`no 2`);
+    const student = {
+        name: "Attawit",
+        score: 75,
+        isPass: false
+    };
+    
+    if (student.score >= 50) {
+        student.isPass = true;
+        console.log(`${student.name} สอบผ่าน คะแนน: ${student.score}`);
+    } else {
+        student.isPass = false;
+        console.log(`${student.name} สอบไม่ผ่าน คะแนน: ${student.score}`);
+    }
+
+    //ข้อ3 การแสดงผลตัวเลขคู่
+    console.log(`no 3`);
+    console.log("ตัวเลขคู่ตั้งแต่ 0 ถึง 20:");
+    for (let i = 0; i <= 20; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+
+    //ข้อ4 การใช้ switch statement
+    console.log(`no 4`);
+    const weather = prompt("Enter weather (hot/cold/rainy):");
+    console.log("=== Switch Statement Example ===");
+    console.log(`Selected weather: ${weather}`);
+    switch (weather) {
+        case "hot":
+            console.log("อากาศร้อน ควรดื่มน้ำเยอะๆ");
+            break;
+        case "cold":
+            console.log("อากาศหนาว ควรใส่เสื้อกันหนาว");
+            break;
+        case "rainy":
+            console.log("ฝนตก ควรพกร่ม");
+            break;
+        default:
+            console.log("สภาพอากาศปกติ");
+    }
+    console.log(`no 5`);
+    //ข้อ5 การหาผลรวมใน Array
+    const numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+    let sum = 0;
+    
+    console.log("ตัวเลขที่จะนำมาหาผลรวม:");
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+        sum += numbers[i];
+    }
+    
+    console.log(`ผลรวมของตัวเลขทั้งหมด: ${sum}`);
+
+    // แบบฝึกหัดเพิ่มเติม
+    console.log("\n=== แบบฝึกหัดเพิ่มเติม ===");
+
+    // ข้อ6 การคำนวณพื้นที่
+    console.log(`\nข้อ 6: การคำนวณพื้นที่`);
+    function calculateArea(width, height) {
+        return width * height;
+    }
+    
+    const width = 10;
+    const height = 5;
+    const area = calculateArea(width, height);
+    console.log(`พื้นที่สี่เหลี่ยม กว้าง ${width} สูง ${height} = ${area}`);
+
+    // ข้อ7 การจัดการสินค้า
+    console.log(`\nข้อ 7: การจัดการสินค้า`);
+    const products = ["เสื้อ", "กางเกง", "รองเท้า", "กระเป๋า", "หมวก"];
+    console.log("สินค้าเริ่มต้น:", products);
+    
+    products.push("แว่นตา");
+    console.log("หลังเพิ่มสินค้า:", products);
+    
+    const removedProduct = products.pop();
+    console.log("หลังลบสินค้าสุดท้าย:", products);
+    console.log("สินค้าที่ถูกลบ:", removedProduct);
+
+    // ข้อ8 การหาชื่อยาว
+    console.log(`\nข้อ 8: การหาชื่อยาว`);
+    const names = ["ณัฐ", "สมชาย", "วิไลรัตน์", "อภิชาติ", "มานะ", "สุวรรณา"];
+    console.log("ชื่อทั้งหมด:", names);
+    
+    const longNames = names.filter(name => name.length > 5);
+    console.log("ชื่อที่มีความยาวมากกว่า 5 ตัวอักษร:", longNames);
+
+    // ข้อ9 การแปลงค่าเงิน
+    console.log(`\nข้อ 9: การแปลงค่าเงิน`);
+    const prices = [100, 250, 300, 450, 200, 150, 350, 400, 180, 220];
+    console.log("ราคาเดิม:", prices);
+    
+    const discountedPrices = prices.map(price => price * 0.9);
+    console.log("ราคาหลังหักส่วนลด 10%:", discountedPrices);
+
+    // ข้อ10 การคำนวณคะแนนเฉลี่ย
+    console.log(`\nข้อ 10: การคำนวณคะแนนเฉลี่ย`);
+    function getAverageScore(scores) {
+        const total = scores.reduce((sum, score) => sum + score, 0);
+        return total / scores.length;
+    }
+    
+    const studentScores = [85, 92, 78, 88, 95, 73, 90, 87, 82, 91];
+    console.log("คะแนนนักเรียน 10 คน:", studentScores);
+    
+    const average = getAverageScore(studentScores);
+    console.log(`คะแนนเฉลี่ย: ${average.toFixed(2)}`);
+
+    // ตัวอย่างฟังก์ชัน greet
+    console.log(`\nตัวอย่างฟังก์ชัน:`);
+    function greet(name) {
+        return "สวัสดี, " + name;
+    }
+    console.log(greet("นักศึกษา")); // Output: สวัสดี, นักศึกษา
+</script>
+</html>
