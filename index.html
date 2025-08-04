@@ -21,9 +21,11 @@
     const birthYear = 1978;
     const currentYear = 2025;
     const ageInYears = currentYear - birthYear;
+    console.log(`no 1`);
     console.log(`คุณอายุ ${ageInYears} ปี`);
 
     //ข้อ2 
+    console.log(`no 2`);
     const student = {
         name: "Attawit",
         score: 75,
@@ -39,6 +41,7 @@
     }
 
     //ข้อ3 การแสดงผลตัวเลขคู่
+    console.log(`no 3`);
     console.log("ตัวเลขคู่ตั้งแต่ 0 ถึง 20:");
     for (let i = 0; i <= 20; i++) {
         if (i % 2 === 0) {
@@ -47,7 +50,10 @@
     }
 
     //ข้อ4 การใช้ switch statement
-    const weather = "hot";
+    console.log(`no 4`);
+    const weather = prompt("Enter weather (hot/cold/rainy):");
+    console.log("=== Switch Statement Example ===");
+    console.log(`Selected weather: ${weather}`);
     switch (weather) {
         case "hot":
             console.log("อากาศร้อน ควรดื่มน้ำเยอะๆ");
@@ -61,12 +67,14 @@
         default:
             console.log("สภาพอากาศปกติ");
     }
-
+    console.log(`no 5`);
     //ข้อ5 การหาผลรวมใน Array
     const numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
     let sum = 0;
     
+    console.log("ตัวเลขที่จะนำมาหาผลรวม:");
     for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
         sum += numbers[i];
     }
     
