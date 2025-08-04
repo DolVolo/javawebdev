@@ -83,19 +83,19 @@
     // แบบฝึกหัดเพิ่มเติม
     console.log("\n=== แบบฝึกหัดเพิ่มเติม ===");
 
-    // ข้อ6 การคำนวณพื้นที่
-    console.log(`\nข้อ 6: การคำนวณพื้นที่`);
+    // ข้อ6 
+    console.log(`\nข้อ 6`);
     function calculateArea(width, height) {
         return width * height;
     }
     
-    const width = 10;
-    const height = 5;
-    const area = calculateArea(width, height);
+    let width = 10;
+    let height = 5;
+    let area = calculateArea(width, height);
     console.log(`พื้นที่สี่เหลี่ยม กว้าง ${width} สูง ${height} = ${area}`);
 
-    // ข้อ7 การจัดการสินค้า
-    console.log(`\nข้อ 7: การจัดการสินค้า`);
+    // ข้อ7 
+    console.log(`\nข้อ 7`);
     const products = ["เสื้อ", "กางเกง", "รองเท้า", "กระเป๋า", "หมวก"];
     console.log("สินค้าเริ่มต้น:", products);
     
@@ -106,24 +106,24 @@
     console.log("หลังลบสินค้าสุดท้าย:", products);
     console.log("สินค้าที่ถูกลบ:", removedProduct);
 
-    // ข้อ8 การหาชื่อยาว
-    console.log(`\nข้อ 8: การหาชื่อยาว`);
+    // ข้อ8 
+    console.log(`\nข้อ 8`);
     const names = ["ณัฐ", "สมชาย", "วิไลรัตน์", "อภิชาติ", "มานะ", "สุวรรณา"];
     console.log("ชื่อทั้งหมด:", names);
     
     const longNames = names.filter(name => name.length > 5);
     console.log("ชื่อที่มีความยาวมากกว่า 5 ตัวอักษร:", longNames);
 
-    // ข้อ9 การแปลงค่าเงิน
-    console.log(`\nข้อ 9: การแปลงค่าเงิน`);
+    // ข้อ9 
+    console.log(`\nข้อ 9`);
     const prices = [100, 250, 300, 450, 200, 150, 350, 400, 180, 220];
     console.log("ราคาเดิม:", prices);
     
     const discountedPrices = prices.map(price => price * 0.9);
     console.log("ราคาหลังหักส่วนลด 10%:", discountedPrices);
 
-    // ข้อ10 การคำนวณคะแนนเฉลี่ย
-    console.log(`\nข้อ 10: การคำนวณคะแนนเฉลี่ย`);
+    // ข้อ10 
+    console.log(`\nข้อ 10`);
     function getAverageScore(scores) {
         const total = scores.reduce((sum, score) => sum + score, 0);
         return total / scores.length;
